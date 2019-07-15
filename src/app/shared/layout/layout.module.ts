@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MaterialModule } from '../material/material.module';
+import { LayoutHeaderComponent } from './components/layout-header/layout-header.component';
 
 const components = [
+  LayoutHeaderComponent,
 ];
 
 @NgModule({
