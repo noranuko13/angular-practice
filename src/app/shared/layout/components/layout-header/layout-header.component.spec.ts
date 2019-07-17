@@ -10,8 +10,7 @@ describe('LayoutHeaderComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ SharedModule ],
-    })
-    .compileComponents();
+    }).compileComponents().then();
   }));
 
   beforeEach(() => {
