@@ -8,8 +8,8 @@
 
 ```
 $ng version
-Angular CLI: 8.1.0
-Node: 10.16.0
+Angular CLI: 10.1.4
+Node: 12.18.4
 OS: win32 x64
 ```
 
