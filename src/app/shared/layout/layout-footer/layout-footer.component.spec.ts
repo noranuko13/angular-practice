@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 import { LayoutFooterComponent } from './layout-footer.component';
@@ -7,7 +7,7 @@ describe('LayoutFooterComponent', () => {
   let component: LayoutFooterComponent;
   let fixture: ComponentFixture<LayoutFooterComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [ SharedModule ],
     }).compileComponents().then();
