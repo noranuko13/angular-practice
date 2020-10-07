@@ -1,5 +1,7 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import * as faker from 'faker/locale/ja';
+import { RequestInfo } from 'angular-in-memory-web-api/interfaces';
+import { Observable } from 'rxjs';
 
 import { UserInterface as IUser } from './interfaces/user.interface';
 
@@ -20,7 +22,7 @@ const manyUsers = (count = 5): IUser[] => {
 
 export class InMemoryWebApiService implements InMemoryDbService {
 
-  createDb() {
+  createDb(reqInfo?: RequestInfo): {} | Observable<{}> | Promise<{}> {
     return {
       users: manyUsers(),
     };
