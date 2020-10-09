@@ -1,5 +1,7 @@
 # angular-practice
 
+![Actions Status](https://github.com/noranuko13/angular-practice/workflows/CI/badge.svg)
+
 ## Overview
 
 - Practice of Programming Angular.
