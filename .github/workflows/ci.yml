@@ -8,8 +8,8 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-    name: Build applications
+  ci:
+    name: CI
 
     runs-on: ubuntu-latest
 
@@ -29,22 +29,19 @@ jobs:
             ${{ runner.OS }}-
       - name: Install dependencies
         run: npm ci
-      - run: npm run build --if-present
 
-  lint:
-    name: ESLint
-    needs: [ build ]
-    steps:
-      - name: Run linters
+      - name: Build
+        run: npm run build --if-present
+
+      - name: ESLint
         uses: wearerequired/lint-action@v1
         with:
           github_token: ${{ secrets.github_token }}
           eslint: true
           # prettier: true
 
-  test:
-    name: Unit and E2E Testing
-    needs: [ build, lint ]
-    steps:
-      - run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
-      - run: npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
+      - name: Unit Test
+        run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+
+      - name: E2E Test
+        run: npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
