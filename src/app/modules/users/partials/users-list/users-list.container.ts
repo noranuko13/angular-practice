@@ -9,8 +9,6 @@ import { UsersService } from '../../users.service';
   selector: 'app-users-list',
   templateUrl: './users-list.container.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styles: [
-  ]
 })
 export class UsersListContainer {
 

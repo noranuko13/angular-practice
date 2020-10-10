@@ -4,8 +4,6 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   selector: 'app-users-base',
   templateUrl: './users-base.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styles: [
-  ]
 })
 export class UsersBaseComponent implements OnInit {
 
