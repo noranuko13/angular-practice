@@ -7,6 +7,7 @@ import { UsersRoutingModule } from './users-routing.module';
 import { UsersBaseComponent } from './pages/users-base.component';
 import { UsersSearchComponent } from './pages/users-search/users-search.component';
 import { UsersListComponent } from './partials/users-list/users-list.component';
+import { UsersListContainer } from './partials/users-list/users-list.container';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { UsersListComponent } from './partials/users-list/users-list.component';
     UsersBaseComponent,
     UsersSearchComponent,
     UsersListComponent,
+    UsersListContainer,
   ],
   imports: [
     CommonModule,
