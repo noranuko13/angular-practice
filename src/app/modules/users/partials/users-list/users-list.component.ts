@@ -7,8 +7,6 @@ import { user } from 'src/resources/user';
   selector: 'app-users-list-ui',
   templateUrl: './users-list.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styles: [
-  ]
 })
 export class UsersListComponent {
 
