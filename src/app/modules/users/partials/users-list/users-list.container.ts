@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { UserInterface as IUser } from 'src/app/interfaces/user.interface';
+
+import { UsersService } from '../../users.service';
 
 @Component({
   selector: 'app-users-list',
@@ -6,11 +11,10 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class UsersListContainer implements OnInit {
+export class UsersListContainer {
 
-  constructor() { }
+  users$: Observable<IUser[]> = this.service.getUsers();
 
-  ngOnInit(): void {
-  }
+  constructor(private service: UsersService) { }
 
 }
