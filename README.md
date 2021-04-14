@@ -6,15 +6,6 @@
 
 - Practice of Programming Angular.
 
-## Environments
-
-```
-$ng version
-Angular CLI: 10.1.4
-Node: 12.18.4
-OS: win32 x64
-```
-
 ## Links
 
 - [Angular](https://angular.io)
